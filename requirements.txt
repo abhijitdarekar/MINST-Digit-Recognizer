@@ -4,4 +4,5 @@ flask
 torch
 python-dotenv
 torchvision
-scikit-lean
+scikit-learn
+-e .

@@ -1,4 +1,4 @@
-import sys
+
 import os
 import logging
 
@@ -18,3 +18,5 @@ logging.basicConfig(
     format="[ %(asctime)s ] %(lineno)d %(name)s | %(levelname)s | %(message)s",
     level=logging.DEBUG,
 )
+
+logging.info("Logging Starts.....\n")
