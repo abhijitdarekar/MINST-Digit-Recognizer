@@ -13,8 +13,8 @@ from dataclasses import dataclass
 
 @dataclass
 class DataTransfromationConfig:
-    test_data_path : str=CONFIG['TEST_DATA_PATH']
-    train_data_path :str = CONFIG['TRAIN_DATA_PATH']
+    test_data_path : str=CONFIG['TEST_FILE_PATH']
+    train_data_path :str = CONFIG['TRAIN_FILE_PATH']
 
 class DataTransformation:
     def __init__(self,):
@@ -35,8 +35,12 @@ class DataTransformation:
             
             train_loader = DataLoader(train_dataset,batch_size=CONFIG["BATCH_SIZE"],shuffle=True)
             test_loader  = DataLoader(test_dataset,batch_size=CONFIG['BATCH_SIZE'],shuffle=True)
-            
-        
+            logging.info("Dataloader for train and test created.")
+
+            return (
+                train_loader,
+                test_loader
+            )
 
 
         except Exception as e:

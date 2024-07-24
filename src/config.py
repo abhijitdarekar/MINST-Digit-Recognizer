@@ -14,5 +14,9 @@ CONFIG = {
     "BATCH_SIZE":100,
     "USE_GPU":False,
     "TRAIN_SIZE":0.3,
-    "IMAGE_SIZE":(28,28)
+    "IMAGE_SIZE":(28,28),
+
+    "MODEL_SAVE_PATH":os.path.join("artifacts","pytorch_model.pt"),
+    "LEARNING_RATE":0.0001,
+    "NUM_EPOCHS":25
 }
