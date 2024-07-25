@@ -43,6 +43,8 @@ def get_transforms():
         transforms.ToTensor(),
         transforms.Normalize(mean=(0.5,), std=(0.5,))
         ])
+
+    returns train_transform, test_transform
     """
     transform_train = transforms.Compose([
         transforms.ToPILImage(),

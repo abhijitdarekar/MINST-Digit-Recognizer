@@ -15,27 +15,6 @@ class ModelConfig:
     learning_rate :float = CONFIG["LEARNING_RATE"]
     num_epochs :int = CONFIG['NUM_EPOCHS']
 
-# class EarlyStopper:
-#     def __init__(self, patience:int, min_delta:float):
-#         self.patience = patience
-#         self.min_delta = min_delta
-#         self.min_validation_loss = float('inf')
-#         self.counter = 0
-    
-#     def __call__(self, loss):
-#         if loss < self.min_validation_loss - self.min_delta:
-#             logging.info("MODEL TRAINING: Validation loss decreased.")
-#             self.min_validation_loss = loss
-#             self.counter = 0
-#         else:
-#             logging.info("MODEL TRAINING: No significant decrease in validation loss.")
-#             self.counter += 1
-        
-#         if self.counter >= self.patience:
-#             return True
-        
-#         return False
-
 class EarlyStopper:
     def __init__(self, patience=1, min_delta=0):
         self.patience = patience
